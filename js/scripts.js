@@ -53,3 +53,7 @@ function reveal() {
   
   window.addEventListener("scroll", reveal);
   /* == ANIMATION CSS == */
+
+
+  /* == TABBED CATEGORIES == */
+  /* == TABBED CATEGORIES == */

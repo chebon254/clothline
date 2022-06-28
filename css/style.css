@@ -7,8 +7,10 @@
 }
 :root{
     --active: #2554f6;
-    --background: #ffffff;
-    --background-two: #f7f7f7;
+    --white: #ffffff;
+    --white-two: #f7f7f7;
+    --white-three: #dbdbdb;
+    --white-four: #f9f9f9;
     --text: #28292b;
     --tint: #3e3f41;
 }
@@ -74,7 +76,7 @@ nav{
     height: 44px;
     flex-grow: 1 !important;
     border-radius: 10px;
-    background-color: var(--background-two);
+    background-color: var(--white-two);
     padding: 0px 10px 0px 40px;
     border: 0;
     outline: none;
@@ -94,6 +96,7 @@ nav{
 .account-access{
     height: fit-content;
     width: fit-content;
+    padding: 0px 20px;
 }
 .account-access a{
     font-size: 16px;
@@ -134,7 +137,7 @@ nav{
     border-radius: 50%;
     font-size: 10px;
     font-weight: 500;
-    color: var(--background);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +196,10 @@ nav{
     color: var(--text);
     padding: 6px 10px;
 }
+.next-nav-links a i{
+    color: var(--tint);
+    font-size: 12px;
+}
 .next-nav-offer{
     float: right !important;
 }
@@ -224,7 +231,7 @@ main{
     max-width: 600px;
     flex-grow: 1;
     position: absolute;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
 }
 .slider .text h1{
@@ -238,25 +245,40 @@ main{
     font-size: 20px;
     font-weight: 500;
     color: var(--text);
+    font-family: Joliet;
     margin: 0px 0px 20px;
     animation: from-left 1400ms;
 }
 .slider .text button{
     height: 60px;
     width: 220px;
-    border: 4px;
+    border: 0px;
+    border-radius: 2px;
     outline: none;
     background-color: var(--active);
     font-size: 16px;
     font-weight: 600;
-    color: var(--background);
+    color: var(--white);
     cursor: pointer;
     animation: from-left 1800ms;
+}
+.slider .image{
+    min-height: 500px;
+    width: 500px;
+    flex-grow: 1;
+    position: absolute;
+    top: 45%;
+    right: 50px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .slider-select{
     position: absolute;
     bottom: 20px;
     left: 50%;
+    transform: translateX(-50%);
     width: 200px;
     display: flex;
     align-items: center;
@@ -299,6 +321,219 @@ main{
 .main-categories{
     height: fit-content;
     width: 100% !important;
+}
+.headline{
+    padding: 40px 0px 20px;
+    height: fit-content;
+    width: 100% !important;
+    text-align: center;
+}
+.headline span{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+}
+.headline p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--tint);
+}
+.main-cat-content{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px 30px;
+}
+.main-right{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-right .card{
+    height: 98%;
+    width: 98%;
+    background-color: var(--white-four);
+}
+.main-left{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main-left .card{
+    height: 48%;
+    width: 48%;
+    background-color: var(--white-four);
+}
+.main-cat-content .card{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-cat-content .card img{
+    width: 80%;
+}
+.main-cat-content .card h1{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    animation: from-bottom 500ms;
+}
+.main-cat-content .card p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--tint);
+}
+.main-cat-content .card:hover img{
+    transform: scale(1.06);
+    transition: all ease 1000ms;
+}
+.main-cat-content .card:hover p{
+    display: block;
+}
+.card-text{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    animation: from-bottom 1600ms;
+}
+.card-text p{
+    display: none;
+    animation: from-bottom 800ms;
+}
+@-webkit-keyframes from-bottom {
+    from {
+        transform: translateY(20%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+  }
+  
+  @keyframes from-bottom {
+    from {
+        transform: translateY(20%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+  }
+
+
+
+
+
+
+footer{
+    height: fit-content;
+    width: 100% !important;
+    padding: 30px 0px;
+    background-color: var(--text);
+}
+.footer-contaner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.top-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.top-footer-col{
+    height: 200px;
+    width: 270px;
+    margin: 0px 10px;
+}
+.top-footer-col h4{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    text-align: left;
+    margin: 0px;
+}
+.top-footer-col ul{
+    list-style: none;
+    margin: 5px 0px;
+}
+.top-footer-col ul li{
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.top-footer-col ul li a{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white-three);
+    text-align: left;
+    text-decoration: none;
+}
+.top-footer-col ul li a:hover{
+    transition: .2s;
+    color: var(--white);
+}
+.payment-icons{
+    display: flex;
+    flex-direction: row;
+}
+.payment-icons i{
+    font-size: 60px;
+    color: #181818;
+    margin: 0px 10px 0px 0px;
+}
+.bottom-footer{
+    height: fit-content;
+}
+.top-bottom{
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px 0px;
+    text-align: center;
+}
+.top-bottom p{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: var(--white);
+    margin: 10px 0px;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 20px;
+}
+.social-icons a{
+    margin: 0px 10px;
+    text-decoration: none;
+}
+.social-icons a i{
+    font-size: 30px;
+    color: var(--white);
+}
+.social-icons a:hover{
+    cursor: pointer;
+}
+.social-icons a:hover i{
+    color: #563988;
+    transition: 0.3s;
+}
+.copyright{
+    box-sizing: border-box;
+    padding: 5px 0px;
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--white);
+    text-align: center;
 }
 /* == || CATEGORIES SECTION == */
 /* == RESPONSIVE == */
